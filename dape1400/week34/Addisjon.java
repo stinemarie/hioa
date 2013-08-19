@@ -4,30 +4,30 @@ public class Addisjon
 {
    public static void main( String args[] )
    {
-      String førsteSifferstreng;
+      String fÃ¸rsteSifferstreng;
       String andreSifferstreng;
 
-      int førstetall;
+      int fÃ¸rstetall;
       int andretall;
       int sum;
 
-      // Leser inn første tall fra bruker i form av en sifferstreng:
-      førsteSifferstreng = JOptionPane.showInputDialog( 
-      		"Skriv inn første hele tall" );
+      // Leser inn fÃ¸rste tall fra bruker i form av en sifferstreng:
+      fÃ¸rsteSifferstreng = JOptionPane.showInputDialog( 
+      		"Skriv inn fÃ¸rste hele tall" );
 
       // Leser inn andre tall fra bruker i form av en sifferstreng:
       andreSifferstreng =
          JOptionPane.showInputDialog( "Skriv inn andre hele tall" );
 
       // Konverterer sifferstrengene til tallverdier:
-      førstetall = Integer.parseInt( førsteSifferstreng );
+      fÃ¸rstetall = Integer.parseInt( fÃ¸rsteSifferstreng );
       andretall = Integer.parseInt( andreSifferstreng );
 
       // Adderer tallene og lagrer summen i variabelen sum:
-      sum = førstetall + andretall;
+      sum = fÃ¸rstetall + andretall;
 
       // Viser resultatet:
       JOptionPane.showMessageDialog( null, "Summen er " + sum,
          "Resultater", JOptionPane.PLAIN_MESSAGE );
-   } // slutt på main-metoden
-}  // slutt på klassen Addisjon
+   } // slutt pÃ¥ main-metoden
+}  // slutt pÃ¥ klassen Addisjon
