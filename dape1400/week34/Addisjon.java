@@ -27,7 +27,7 @@ public class Addisjon
       sum = førstetall + andretall;
 
       // Viser resultatet:
-      JOptionPane.showMessageDialog( null, "Summen er " + sum,
+      JOptionPane.showMessageDialog( null, førstetall + " + " + andretall + " = " + sum,
          "Resultater", JOptionPane.PLAIN_MESSAGE );
    } // slutt på main-metoden
 }  // slutt på klassen Addisjon
