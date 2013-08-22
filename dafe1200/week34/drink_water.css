@@ -1,11 +1,11 @@
-th, td {
+table#multiplication th, table#multiplication td {
     border: 1px solid gray;
 }
 
-th {
+table#multiplication th {
     border-width: 2px;
 }
 
-td {
+table#multiplication td {
     border-style: dotted;
 }
