@@ -20,3 +20,7 @@ table#gallery td {
     height: 200px;
     width: 220px; // This breaks image proportions, but what the heck...
 }
+
+table#gallery caption {
+    caption-side: bottom;
+}
