@@ -9,3 +9,7 @@ table#multiplication th {
 table#multiplication td {
     border-style: dotted;
 }
+
+#gallery img {
+    height: 150px;
+}
