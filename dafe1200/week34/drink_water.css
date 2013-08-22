@@ -1,0 +1,11 @@
+th, td {
+    border: 1px solid gray;
+}
+
+th {
+    border-width: 2px;
+}
+
+td {
+    border-style: dotted;
+}
