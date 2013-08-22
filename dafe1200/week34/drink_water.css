@@ -10,6 +10,12 @@ table#multiplication td {
     border-style: dotted;
 }
 
+table#gallery td {
+    text-align: center;
+    padding-right: 75px;
+    padding-bottom: 25px
+}
+
 #gallery img {
     height: 200px;
     width: 220px; // This breaks image proportions, but what the heck...
