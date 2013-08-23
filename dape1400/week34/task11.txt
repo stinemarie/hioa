@@ -1,0 +1,14 @@
+Finn ut hvilken verdi variabelen minst har fått etter at følgende instruksjoner er blitt utført:
+
+  int m = 3;
+  int n = -7;
+  int p = 2;
+  int minst = m;
+  if ( n < minst )
+    minst = n;
+  if ( p < minst )
+    minst = p;
+
+Svar:
+
+  minst = -7;
