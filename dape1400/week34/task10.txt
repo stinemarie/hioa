@@ -1,0 +1,11 @@
+Anta at variablene m og n er deklarert og initialisert på denne måte:
+  int m = 5;
+  int n = -7;
+
+Avgjør om følgende uttrykk har verdien true eller false:
+  m < n: false
+  n >= m: false
+  n <= m: true
+  n > m: false
+  m != n: true
+  m == n: false
