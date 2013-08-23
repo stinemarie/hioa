@@ -21,26 +21,17 @@ public class Sammenlikning
       førstetall = Integer.parseInt( førsteSifferstreng );
       andretall = Integer.parseInt( andreSifferstreng );
 
-      // initialiserer utskriftsstrengen til en tom streng
       resultat = "";
 
+      // initialiserer utskriftsstrengen til en tom streng
       if ( førstetall == andretall )
-         resultat = resultat + førstetall + " == " + andretall;
-
-      if ( førstetall != andretall )
-         resultat = resultat + førstetall + " != " + andretall;
+         resultat += "Tallene er like store.";
 
       if ( førstetall < andretall )
-         resultat = resultat + "\n" + førstetall + " < " + andretall;
+         resultat += førstetall + " er minst.";
 
       if ( førstetall > andretall )
-         resultat = resultat + "\n" + førstetall + " > " + andretall;
-
-      if ( førstetall <= andretall )
-         resultat = resultat + "\n" + førstetall + " <= " + andretall;
-
-      if ( førstetall >= andretall )
-         resultat = resultat + "\n" + førstetall + " >= " + andretall;
+         resultat += andretall + " er minst.";
 
       // Viser resultat av sammenlikningene
       JOptionPane.showMessageDialog( null, resultat, 
