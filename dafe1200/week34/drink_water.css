@@ -18,7 +18,7 @@ table#gallery td {
 
 #gallery img {
     height: 200px;
-    width: 220px; // This breaks image proportions, but what the heck...
+    width: 220px; /* This breaks image proportions, but what the heck... */
 }
 
 table#gallery caption {
