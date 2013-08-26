@@ -78,8 +78,10 @@ public class LawnMower
             }};
 
         if (lawnMower.houseLargerThanLawn())
-            JOptionPane.showMessageDialog( null, "The house is larger than the lawn." );
+            JOptionPane.showMessageDialog( null, "The house is larger than the lawn.",
+                                           "Invalid input", JOptionPane.ERROR_MESSAGE);
         else
-            JOptionPane.showMessageDialog( null, "The lawn will be cut in " + lawnMower.getCuttingTimeAsString() + '.' );
+            JOptionPane.showMessageDialog( null, "The lawn will be cut in " + lawnMower.getCuttingTimeAsString() + '.',
+                                           "Lawn cutting time", JOptionPane.INFORMATION_MESSAGE);
     }
 };
