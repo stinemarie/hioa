@@ -24,6 +24,8 @@ public class LawnMower
 {
     protected int lawn_width, lawn_length, house_width, house_length; // meters
     private static final float CUTTING_RATE = (float) 0.4; // square meters per second
+    private static final int SECONDS_PER_MINUTE = 60;
+    private static final int SECONDS_PER_HOUR = SECONDS_PER_MINUTE * 60;
 
     public boolean houseLargerThanLawn()
     {
@@ -40,6 +42,21 @@ public class LawnMower
     {
         // Unit: ( meters * meters ) / ( meters * meters / seconds ) = seconds
         return Math.round(getLawnArea() / CUTTING_RATE);
+    }
+
+    public String getCuttingTimeAsString()
+    {
+        int hours, minutes, seconds;
+
+        seconds = getCuttingTimeInSeconds();
+
+        hours = seconds / SECONDS_PER_HOUR;
+        seconds = seconds % SECONDS_PER_HOUR;
+
+        minutes = seconds / SECONDS_PER_MINUTE;
+        seconds = seconds % SECONDS_PER_MINUTE;
+
+        return hours + " hours, " + minutes + " minutes and " + seconds + " seconds";
     }
 
     public static void main ( String[] args )
