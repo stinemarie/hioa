@@ -9,3 +9,6 @@ default: LawnMower.class
 
 test: UnitTests.class LawnMower.class
 	$(java) org.junit.runner.JUnitCore UnitTests
+
+clean:
+	rm -f *.class
