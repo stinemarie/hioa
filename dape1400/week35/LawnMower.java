@@ -22,7 +22,8 @@ istedenfor å foreta beregning.
 
 public class LawnMower
 {
-    protected int lawn_width, lawn_length, house_width, house_length; // In meters
+    protected int lawn_width, lawn_length, house_width, house_length; // meters
+    private static final double CUTTING_RATE = 0.4; // square meters per second
 
     public boolean houseLargerThanLawn()
     {
@@ -31,7 +32,14 @@ public class LawnMower
 
     public int getLawnArea()
     {
+        // Unit: meters * meters
         return lawn_width * lawn_length - house_width * house_length;
+    }
+
+    public double getCuttingTimeInSeconds()
+    {
+        // Unit: ( meters * meters ) / ( meters * meters / seconds ) = seconds
+        return getLawnArea() / CUTTING_RATE;
     }
 
     public static void main ( String[] args )
