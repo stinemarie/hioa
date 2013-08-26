@@ -20,6 +20,8 @@ istedenfor å foreta beregning.
 
 **/
 
+import javax.swing.JOptionPane;
+
 public class LawnMower
 {
     protected int lawn_width, lawn_length, house_width, house_length; // meters
@@ -59,18 +61,25 @@ public class LawnMower
         return hours + " hours, " + minutes + " minutes and " + seconds + " seconds";
     }
 
+    public static int inputInteger( String message )
+    {
+        return Integer.parseInt( JOptionPane.showInputDialog ( message ) );
+    }
+
     public static void main ( String[] args )
     {
-        // Input lawn and house width and length
+        LawnMower lawnMower = new LawnMower()
+            {{
+                lawn_width = inputInteger( "Enter lawn width in meters." );
+                lawn_length = inputInteger( "Enter lawn length in meters." );
 
-        // If any lawn dimension is smaller than the corresponding
-        // house dimension, notify the user and stop execution.
+                house_width = inputInteger( "Enter house width in meters." );
+                house_length = inputInteger( "Enter house length in meters." );
+            }};
 
-        // Calculate lawn area
-        // Calculate cutting time from cutting rate and lawn area
-
-        // Convert seconds to hours, minutes and seconds
-
-        // Display the cutting time.
+        if (lawnMower.houseLargerThanLawn())
+            JOptionPane.showMessageDialog( null, "The house is larger than the lawn." );
+        else
+            JOptionPane.showMessageDialog( null, "The lawn will be cut in " + lawnMower.getCuttingTimeAsString() + '.' );
     }
 };
