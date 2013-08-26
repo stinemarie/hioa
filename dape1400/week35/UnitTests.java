@@ -33,6 +33,6 @@ public class UnitTests
     public void getCuttingTimeInSeconds()
     {
         lawnMower = new LawnMower() {{ lawn_width=5; lawn_length=5; house_width=4; house_length=4; }};
-        assertEquals(22.5, lawnMower.getCuttingTimeInSeconds(), 0);
+        assertEquals(23, lawnMower.getCuttingTimeInSeconds());
     }
 }
