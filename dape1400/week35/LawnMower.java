@@ -22,6 +22,13 @@ istedenfor å foreta beregning.
 
 public class LawnMower
 {
+    protected int lawn_width, lawn_length, house_width, house_length;
+
+    public boolean houseLargerThanLawn()
+    {
+        return ( ( lawn_width < house_width ) || ( lawn_length < house_length ) );
+    }
+
     public static void main ( String[] args )
     {
         // Input lawn and house width and length
