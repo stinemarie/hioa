@@ -24,10 +24,19 @@ import javax.swing.JOptionPane;
 
 public class LawnMower
 {
-    protected int lawn_width, lawn_length, house_width, house_length; // meters
+    private int lawn_width, lawn_length, house_width, house_length; // meters
     private static final float CUTTING_RATE = (float) 0.4; // square meters per second
     private static final int SECONDS_PER_MINUTE = 60;
     private static final int SECONDS_PER_HOUR = SECONDS_PER_MINUTE * 60;
+
+    public LawnMower ( int lawn_width_in_meters, int lawn_length_in_meters,
+                       int house_width_in_meters, int house_length_in_meters )
+    {
+        lawn_width = lawn_width_in_meters;
+        lawn_length = lawn_length_in_meters;
+        house_width = house_width_in_meters;
+        house_length = house_length_in_meters;
+    }
 
     public boolean houseLargerThanLawn()
     {
@@ -68,14 +77,10 @@ public class LawnMower
 
     public static void main ( String[] args )
     {
-        LawnMower lawnMower = new LawnMower()
-            {{
-                lawn_width = inputInteger( "Enter lawn width in meters." );
-                lawn_length = inputInteger( "Enter lawn length in meters." );
-
-                house_width = inputInteger( "Enter house width in meters." );
-                house_length = inputInteger( "Enter house length in meters." );
-            }};
+        LawnMower lawnMower = new LawnMower( inputInteger( "Enter lawn width in meters." ),
+                                             inputInteger( "Enter lawn length in meters." ),
+                                             inputInteger( "Enter house width in meters." ),
+                                             inputInteger( "Enter house length in meters." ));
 
         if (lawnMower.houseLargerThanLawn())
             JOptionPane.showMessageDialog( null, "The house is larger than the lawn.",
