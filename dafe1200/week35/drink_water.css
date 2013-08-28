@@ -1,3 +1,8 @@
+body {
+    background-color: #ccccff;
+    color: #333333;
+}
+
 table#multiplication th, table#multiplication td {
     border: 1px solid gray;
 }
