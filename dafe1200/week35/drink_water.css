@@ -1,0 +1,26 @@
+table#multiplication th, table#multiplication td {
+    border: 1px solid gray;
+}
+
+table#multiplication th {
+    border-width: 2px;
+}
+
+table#multiplication td {
+    border-style: dotted;
+}
+
+table#gallery td {
+    text-align: center;
+    padding-right: 75px;
+    padding-bottom: 25px
+}
+
+#gallery img {
+    height: 200px;
+    width: 220px; /* This breaks image proportions, but what the heck... */
+}
+
+table#gallery caption {
+    caption-side: bottom;
+}
