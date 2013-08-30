@@ -6,6 +6,14 @@ body {
     margin-right: auto;
 }
 
+ul li {
+    margin-top: 10px
+}
+
+ul li:first-child {
+    margin-top: 0px
+}
+
 #multiplication table {
     width: 150px;
     margin-left: 10px;
