@@ -29,13 +29,13 @@ public class LawnMower
     private static final int SECONDS_PER_MINUTE = 60;
     private static final int SECONDS_PER_HOUR = SECONDS_PER_MINUTE * 60;
 
-    public LawnMower ( int lawn_width_in_meters, int lawn_length_in_meters,
-                       int house_width_in_meters, int house_length_in_meters )
+    public LawnMower ( int lawn_width, int lawn_length,
+                       int house_width, int house_length )
     {
-        lawn_width = lawn_width_in_meters;
-        lawn_length = lawn_length_in_meters;
-        house_width = house_width_in_meters;
-        house_length = house_length_in_meters;
+        this.lawn_width = lawn_width;
+        this.lawn_length = lawn_length;
+        this.house_width = house_width;
+        this.house_length = house_length;
     }
 
     public boolean houseLargerThanLawn()
