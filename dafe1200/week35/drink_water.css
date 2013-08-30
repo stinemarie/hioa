@@ -1,31 +1,63 @@
 body {
     background-color: #ccccff;
     color: #333333;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-table#multiplication th, table#multiplication td {
+#multiplication table {
+    width: 150px;
+    margin-left: 10px;
+}
+
+#multiplication th, #multiplication td {
     border: 1px solid gray;
+    text-align: center;
+    padding: 10px;
 }
 
-table#multiplication th {
+#multiplication th {
     border-width: 2px;
+    margin: 0px;
 }
 
-table#multiplication td {
+#multiplication td {
     border-style: dotted;
+    margin: 1px;
 }
 
 table#gallery td {
-    text-align: center;
-    padding-right: 75px;
+    padding-right: 25px;
+    padding-left: 25px;
     padding-bottom: 25px
 }
 
 #gallery img {
-    height: 200px;
-    width: 220px; /* This breaks image proportions, but what the heck... */
+    width: 200px;
 }
 
 table#gallery caption {
     caption-side: bottom;
+}
+
+figure {
+    float: right;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+figure img {
+    width: 150px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+footer a {
+    float: right;
+}
+
+footer a#I-heart-validator {
+    margin-right: 10px;
+    margin-top: 10px;
 }
