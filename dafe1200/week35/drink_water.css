@@ -1,9 +1,20 @@
 body {
     background-color: #ccccff;
     color: #333333;
+}
+
+article {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 800px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #ffffff;
+}
+
+header h1 {
+    margin-top: 0px;
 }
 
 ul li {
@@ -59,6 +70,13 @@ figure img {
     width: 150px;
     margin-bottom: 10px;
     display: block;
+}
+
+footer {
+    /* The overflow attribute makes the footer element expand its height
+       to contain its children (which all float). It's a hack, but
+       it's the least ugly solution. */
+    overflow: auto;
 }
 
 footer a {
