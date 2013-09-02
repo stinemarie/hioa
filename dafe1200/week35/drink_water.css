@@ -1,16 +1,20 @@
 body {
     background-color: #ccccff;
     color: #333333;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 article {
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    width: 800px;
+    max-width: 800px;
+    min-width: 400px;
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
+    border-radius: 5px;
 }
 
 header h1 {
@@ -48,27 +52,36 @@ ul li:first-child {
     margin: 1px;
 }
 
-table#gallery td {
-    padding-right: 25px;
-    padding-left: 25px;
-    padding-bottom: 25px
+
+
+#gallery {
+    /* Make the element contain all its floated children. */
+    overflow: auto;
 }
 
-#gallery img {
-    width: 200px;
-}
-
-table#gallery caption {
-    caption-side: bottom;
-}
-
-figure {
+#gallery figure {
+    width: 130px;
     float: right;
+    height: 180px;
     margin: 0px;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
-figure img {
+#gallery figure.tall {
+    height: 400px;
+}
+
+#gallery figure img {
+    width: 100%
+}
+
+figure.illustration {
+    float: left;
+    margin: 0px;
+    margin-right: 10px;
+}
+
+figure.illustration img {
     width: 150px;
     margin-bottom: 10px;
     display: block;
@@ -81,7 +94,7 @@ footer {
     overflow: auto;
 }
 
-footer a {
+footer a.button {
     float: right;
 }
 
