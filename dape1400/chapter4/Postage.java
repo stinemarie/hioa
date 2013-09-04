@@ -32,26 +32,32 @@ public class Postage
         int weight; // In grams
         int postage; // in NOK
 
-        weight = inputInteger("Enter weight of the letter");
+        while (true)
+        {
+            weight = inputInteger("Enter weight of the letter");
 
-        if (weight <= 20)
-            postage = 9;
-        else if (weight <= 50)
-            postage = 14;
-        else if (weight <= 100)
-            postage = 17;
-        else if (weight <= 350)
-            postage = 27;
-        else if (weight <= 1000)
-            postage = 67;
-        else if (weight <= 2000)
-            postage = 145;
-        else
-            postage = 0;
+            if ( weight < 0 )
+                break;
 
-        if (postage == 0)
-            JOptionPane.showMessageDialog(null, "The letter weighs more than 2000 grams, and is too heavy.");
-        else
-            JOptionPane.showMessageDialog(null, "The letter will cost " + postage + " NOK to send.");
+            if (weight <= 20)
+                postage = 9;
+            else if (weight <= 50)
+                postage = 14;
+            else if (weight <= 100)
+                postage = 17;
+            else if (weight <= 350)
+                postage = 27;
+            else if (weight <= 1000)
+                postage = 67;
+            else if (weight <= 2000)
+                postage = 145;
+            else
+                postage = 0;
+
+            if (weight > 2000)
+                JOptionPane.showMessageDialog(null, "The letter weighs more than 2000 grams, and is too heavy.");
+            else
+                JOptionPane.showMessageDialog(null, "The letter will cost " + postage + " NOK to send.");
+        }
     }
 }
