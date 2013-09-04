@@ -1,13 +1,27 @@
 /**
 
 Eksempel 4:
+
   Vi skal lage et program som gjentatte ganger leser inn et antall
   sekunder og skriver ut dette konvertert til timer, minutter og
   sekunder. Programmet skal avsluttes når brukeren skriver et negativt
   tall.
 
 Oppgave 3:
+
   Skriv et fullstendig program for eksempel 4 ovenfor.
+
+Oppgave 4:
+
+  Lag en forbedret versjon av programmet fra oppgave 3.
+
+  Forbedringen skal gå ut på at dersom det innleste antall sekunder er
+  mindre enn 3600, er det bare antall minutter og sekunder som skal
+  skrives ut. Dersom det innleste antall sekunder er mindre enn 60,
+  skal heller ikke antall minutter skrives ut. Da er det altså bare
+  det innleste antall sekunder som skal skrives ut. (For å få til
+  denne forbedringen, er det greiest å opprette en egen
+  String-variabel for utskriften.)
 
 **/
 
@@ -26,6 +40,7 @@ public class TimeLoop
     public static void main ( String[] args )
     {
         int seconds, minutes, hours;
+        String message;
 
         while (true)
         {
@@ -39,10 +54,14 @@ public class TimeLoop
             minutes = seconds / SECONDS_PER_MINUTE;
             seconds = seconds % SECONDS_PER_MINUTE;
 
-            JOptionPane.showMessageDialog( null,
-                                           hours + " timer, "
-                                           + minutes + " minutter, "
-                                           + seconds + " sekunder" );
+            message = "";
+            if ( hours > 0 )
+                message += hours + " timer, ";
+            if ( minutes > 0 )
+                message += minutes + " minutter, ";
+            message += seconds + " sekunder";
+
+            JOptionPane.showMessageDialog( null, message );
         }
     }
 }
