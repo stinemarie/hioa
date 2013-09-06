@@ -14,10 +14,13 @@ dialogboks.)
 
 import javax.swing.JOptionPane;
 import java.lang.Math;
+import java.text.DecimalFormat;
 
 public class AreaCalc {
     public static void main (String[] args) {
         double radius, area, circumference;
+
+        DecimalFormat formatter = new DecimalFormat(",##0.##");
         
         while ( true )
         {
@@ -30,8 +33,8 @@ public class AreaCalc {
             circumference = 2 * Math.PI * radius;
 
             JOptionPane.showMessageDialog(null,
-                                          "The area of the circle is " + area
-                                          + ",\nand the circumference is " + circumference);
+                                          "The area of the circle is " + formatter.format(area)
+                                          + ",\nand the circumference is " + formatter.format(circumference));
         }
     }
 }
