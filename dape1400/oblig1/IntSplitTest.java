@@ -7,25 +7,25 @@ import static org.junit.Assert.*;
 public class IntSplitTest
 {
     @Test
-    public void IntSplitSingleDigit()
+    public void singleDigit()
     {
         assertEquals("1", IntSplit.split(1));
     }
 
     @Test
-    public void IntSplit98765()
+    public void split98765()
     {
         assertEquals("9   8   7   6   5", IntSplit.split(98765));
     }
 
     @Test
-    public void IntSplitZero()
+    public void zero()
     {
         assertEquals("0", IntSplit.split(0));
     }
 
     @Test
-    public void IntSplitLarge()
+    public void maxValue()
     {
         assertEquals("2   1   4   7   4   8   3   6   4   7", IntSplit.split(Integer.MAX_VALUE));
     }
