@@ -27,27 +27,22 @@ public class IntSplit
 {
     /**
      * Split an integer into individual digits, and return them in a
-     * string separated by three spaces. Handles numbers < 10^4
+     * string separated by three spaces.
      **/
     public static String split(int n)
     {
-        // Variables for individual digits
-        int a, b, c, d, e;
+        String result = "";
 
-        e = n % 10; // Store rightmost rigit from n in e
-        n = n / 10; // Remove rightmost digit from n
+        while ( true )
+        {
+            result = (n % 10) + result;
+            n /= 10; // Remove rightmost rigit from n
 
-        // Likewise for the other digits:
-        d = n % 10;
-        n = n / 10;
-        c = n % 10;
-        n = n / 10;
-        b = n % 10;
-        n = n / 10;
-        a = n % 10;
-        n = n / 10;
-
-        return a + "   " + b + "   " + c + "   " + d + "   " + e;
+            if (n == 0)
+                return result;
+            else
+                result = "   " + result;
+        }
     }
 
     public static void main( String[] args )
