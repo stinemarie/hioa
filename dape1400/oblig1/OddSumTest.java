@@ -7,14 +7,26 @@ import static org.junit.Assert.*;
 public class OddSumTest
 {
     @Test
-    public void threeFive()
+    public void oddToOddTogether()
     {
         assertEquals(8, OddSum.sum(3, 5));
     }
 
     @Test
-    public void oneSeven()
+    public void oddToOddApart()
     {
         assertEquals(16, OddSum.sum(1, 7));
+    }
+
+    @Test
+    public void oddToEven()
+    {
+        assertEquals(17, OddSum.sum(2, 7));
+    }
+
+    @Test
+    public void evenToEven()
+    {
+        assertEquals(25, OddSum.sum(2, 8));
     }
 }

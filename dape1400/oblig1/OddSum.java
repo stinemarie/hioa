@@ -4,6 +4,12 @@ public class OddSum
     {
         int sum = 0;
 
+        // Adjust upper and lower bounds to be odd
+        if ( m % 2 == 0 )
+            sum += m++;
+        if ( n % 2 == 0 )
+            sum += n--;
+
         while ( m <= n )
         {
             sum += m;
