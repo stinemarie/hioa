@@ -29,4 +29,10 @@ public class IntSplitTest
     {
         assertEquals("2   1   4   7   4   8   3   6   4   7", IntSplit.split(Integer.MAX_VALUE));
     }
+
+    @Test
+    public void negative()
+    {
+        assertEquals("-   1", IntSplit.split(-1));
+    }
 }

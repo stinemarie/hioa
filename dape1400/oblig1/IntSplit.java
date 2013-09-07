@@ -32,6 +32,8 @@ public class IntSplit
     public static String split(int n)
     {
         String result = "";
+        boolean negative = ( n < 0 );
+        n = negative ? ( n * -1 ) : n;
 
         while ( true )
         {
@@ -39,7 +41,7 @@ public class IntSplit
             n /= 10; // Remove rightmost rigit from n
 
             if (n == 0)
-                return result;
+                return negative ? ( "-   " + result ) : result;
             else
                 result = "   " + result;
         }
