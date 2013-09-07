@@ -29,4 +29,16 @@ public class OddSumTest
     {
         assertEquals(25, OddSum.sum(2, 8));
     }
+
+    @Test(expected=IllegalArgumentException.class)
+    public void illegalArgument()
+    {
+        OddSum.sum(10, 4);
+    }
+
+    @Test
+    public void negative()
+    {
+        assertEquals(0, OddSum.sum(-5, 5));
+    }
 }
