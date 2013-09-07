@@ -20,13 +20,15 @@ skal de tas med i summen.
 
  */
 
+import javax.swing.JOptionPane;
+
 public class OddSum
 {
     public static int sum(int m, int n)
     {
         if ( m >= n )
         {
-            throw new IllegalArgumentException("The lower bound " + m + " is not lower than the upper bound " + n);
+            throw new IllegalArgumentException("The lower bound must be lower than the upper bound.");
         }
 
         int sum = 0;
@@ -44,5 +46,38 @@ public class OddSum
         }
 
         return sum;
+    }
+
+    public static int inputInteger( String message )
+    {
+        return Integer.parseInt( JOptionPane.showInputDialog( message ) );
+    }
+
+    public static void main ( String[] args )
+    {
+        int m, n, sum;
+
+        while ( true )
+        {
+            m = inputInteger( "Input an integer." );
+            n = inputInteger( "Input an integer higher than " + m + "." );
+
+            // It's easier to ask for forgiveness than permission.
+            try
+            {
+                sum = sum(m, n);
+            }
+            catch ( IllegalArgumentException e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage() );
+                continue; // Try again
+            }
+
+            break; // No exception was thrown
+        }
+
+        JOptionPane.showMessageDialog(null,
+                                      "The sum of all odd integers between " + m
+                                      + " and " + n + " inclusive is " + sum);
     }
 }
