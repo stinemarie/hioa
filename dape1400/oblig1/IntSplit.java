@@ -1,3 +1,5 @@
+/* Matias Hermanrud Fjeld <mhf@hex.no>, S193364, DAPE1400 */
+
 /*
 
 Oppgave 1:
@@ -23,12 +25,15 @@ tallet ikke er for stort til å kunne leses inn som en int-verdi).
 
 import javax.swing.JOptionPane;
 
+/**
+ * Application that splits a string into individual digits
+ */
 public class IntSplit
 {
     /**
      * Split an integer into individual digits, and return them in a
      * string separated by three spaces.
-     **/
+     */
     public static String split(int n)
     {
         String result = "";

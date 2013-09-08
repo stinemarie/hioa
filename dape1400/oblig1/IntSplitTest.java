@@ -1,8 +1,13 @@
+/* Matias Hermanrud Fjeld <mhf@hex.no>, S193364, DAPE1400 */
+
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * Tests for IntSplit
+ */
 @RunWith(JUnit4.class)
 public class IntSplitTest
 {

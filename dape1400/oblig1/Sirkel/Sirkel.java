@@ -1,5 +1,11 @@
+/* Matias Hermanrud Fjeld <mhf@hex.no>, S193364, DAPE1400 */
+
 import javax.swing.JOptionPane;
 
+/**
+ * En klasse for å beregne omkrets, areal og diameter av en sirkel
+ * utifra radius.
+ */
 public class Sirkel
 {
     private float radius;

@@ -1,3 +1,5 @@
+/* Matias Hermanrud Fjeld <mhf@hex.no>, S193364, DAPE1400 */
+
 /*
 
 Oppgave 2
@@ -22,18 +24,20 @@ skal de tas med i summen.
 
 import javax.swing.JOptionPane;
 
+
+/**
+ * Application that calculates the sum of all odd numbers between two bounds
+ */
 public class OddSum
 {
     public static int sum(int m, int n)
     {
         if ( m >= n )
-        {
             throw new IllegalArgumentException("The lower bound must be lower than the upper bound.");
-        }
 
         int sum = 0;
 
-        // Adjust upper and lower bounds to be odd
+        // Include even bounds in the sum
         if ( m % 2 == 0 )
             sum += m++;
         if ( n % 2 == 0 )
