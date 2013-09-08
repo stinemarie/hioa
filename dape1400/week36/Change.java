@@ -107,8 +107,17 @@ public class Change
         return response;
     }
 
+    private static double inputDouble( String message )
+    {
+        return Double.parseDouble( JOptionPane.showInputDialog( message ) );
+    }
+
     public static void main ( String[] args )
     {
-        
+        double price, paid;
+
+        paid = inputDouble(" Oppgi hvor mye som ble betalt ");
+        price = inputDouble(" Oppgi pris på varen ");
+        JOptionPane.showMessageDialog( null, change( paid, price ) );
     }
 }
