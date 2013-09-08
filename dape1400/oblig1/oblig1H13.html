@@ -1,0 +1,169 @@
+<?xml version ="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>
+Programmering H2013 &#8212; obligatorisk innlevering nr. 1
+</title>
+<link rel="stylesheet"
+      type="text/css"
+      href="http://www.iu.hio.no/~kjetilg/Undervisningsstoff/oppgaver.css">
+</head>
+<body>
+<h1>Programmering H2013 &#8212; obligatorisk innlevering nr. 1</h1>
+<p><font color="red"><b>Innleveringsfrist for 1. obligatoriske oppgave mandag 16. september kl.15.
+
+</b></font></p>
+
+<p />Besvarelser kan leveres av grupper på inntil 3 studenter.
+For å få godkjent innleveringen, kreves det at det leveres kjørbare programmer som
+oppfyller spesifikasjonene i oppgavene.
+
+<p />Filene med programmenes kildekode sendes på e-post på følgende måte:<br />
+Emne på e-posten: Innlevering obligatorisk oppgave 1<br />
+Innhold i e-posten: Gruppemedlemmene med fullt navn, studentnummer og klasse/linje.<br />
+Vedlegg: .java-filene. Kompilerte filer (.class-filer)trengs ikke å legges ved.<p />
+
+Oppgaven skal sendes til: programmeringhioa@gmail.com
+
+<br /><br>
+
+
+<p />Pass på at det i
+kildekoden er brukt innrykk, layout og kommentarer i samsvar med god
+programmeringsstil. På toppen av hver klasse bør det være en kommentar som
+forteller hva klassen er ment for, og eventuell annen nyttig info,
+samt navn, studentnummer og klasse for gruppemedlemmene.
+
+<p /><font color="red"><b>Dersom det oppdages at en gruppe har kopiert løsningen til
+en annen gruppe, vil ingen av de to gruppene få godkjent innleveringen!
+(Og derved miste muligheten til å ta eksamen i kurset.)</b></font><br> <br>Det vil
+ikke bli gitt karakter på innleveringen, bare Godkjent/Ikke godkjent.<br> <br>
+<b>Innleveringen må være godkjent for å kunne gå opp til slutteksamen i faget!<br />
+Husk å skrive tydelig gruppemedlemmenes navn, studentnummer og klasse på alle kildefilene som
+hører til programmene.</b>
+
+<p />Oppgavene bygger på lærestoffet i kapitlene
+<a href = "http://www.iu.hio.no/~evav/uvstoff/intro/progintro.html#kap1">1</a>,
+<a href = "http://www.iu.hio.no/~evav/uvstoff/intro/kap2.html">2</a>,
+<a href = "http://www.iu.hio.no/~evav/uvstoff/intro/kap3.html">3</a> og
+<a href = "http://www.iu.hio.no/~evav/uvstoff/intro/kap4.html">4</a>,
+samt eksemplene og ukeoppgavene som er gjennomgått.
+
+Du bør ha lest, og forstått, disse kapitlene og oppgavene før du går i gang med oppgaven.
+
+
+
+<h3>Oppgave 1:</h3>
+<p /><b>Øvelse i å bruke de aritmetiske operatorene i java.</b><br />
+Skriv en applikasjon som leser inn et femsifret heltall fra brukeren,
+splitter opp tallet i enkeltsifre og så skriver enkeltsifrene ut igjen med tre
+mellomrom (blanke tegn) mellom hvert siffer. Dersom det for eksempel blir
+lest inn 98765, skal programmet skrive ut<br />
+<code>9 8 7 6 5</code>
+
+<p />
+Det er her meningen at du skal behandle tallet som en <code>int</code>-verdi og
+bruke <a href = "http://www.iu.hio.no/~evav/uvstoff/intro/kap2.html#aritmetop">regneoperasjoner</a>
+for å splitte det opp i enkeltsifre.
+(Det innleste tallet og hvert enkelt siffer skal lagres i hver sin  heltallsvariabel.
+Du skal altså ikke behandle tallet som en sifferstreng
+og bruke <code>String</code>-metoder.)
+
+<p /><b>Frivillig utfordrning:</b> Prøv å modifisere programmet slik at det virker for
+et vilkårlig antall sifre i det innleste tallet (forutsatt at tallet ikke er
+for stort til å kunne leses inn som en <code>int</code>-verdi).
+
+
+<h3>Oppgave 2</h3>
+<p />Lag et applikasjonsprogram som beregner og skriver ut summen av alle oddetall
+mellom to grenser som brukeren skriver inn. Programmet skal starte med å lese
+inn nedre og øvre grense for summen. Dersom innlest øvre grense er mindre enn
+eller lik nedre grense, skal programmet skrive ut en melding til brukeren om dette og
+foreta ny innlesing. Dette skal gjentas inntil det er lest inn en øvre grense
+som er større enn nedre grense. Når godkjente grenser er lest inn, skal
+programmet beregne nevnte sum og summen skal så skrives ut. Grensene trenger ikke å være partall,
+men hvis en eller begge er det, skal de tas med i summen.
+
+
+
+<h3><a name ="oppg3">Oppgave 3</a></h3>
+<p />
+<p />
+Nedenfor ser du en skisse i pseudokode av klassen <code>Sirkel</code>.
+Din oppgave er å erstatte pseudokoden med java-instruksjoner. <br>
+NB! Pass på at du velger riktig aksess-form
+(<code>private</code> eller <code>public</code>) for datafelt og metoder.
+
+<pre>
+
+<  nødvendig(e) import-setning(er)  >
+
+public class Sirkel
+{
+    <  Datafelt for sirkelens radius. >
+
+    <  Konstruktør som skal gi startverdi til sirkelens radius.
+       NB! Hvis startverdien er negativ, skal radius settes til 0. >
+
+    <  set-metode for sirkelens radius. >
+
+    <  get-metode for sirkelens radius.  >
+
+    <  Metode som beregner og returnerer sirkelens omkrets.  >
+
+    <  Metode som beregner og returnerer sirkelens areal.  >
+
+    <  Metode som viser sirkelens radius, diameter, omkrets
+       og areal i et dialogvindu. NB! Du SKAL bruke klassens
+       metoder for å beregne disse verdiene. >
+
+} // end of class Sirkel
+
+</pre>
+
+<p />
+Nedenfor ser du en skisse av hovedprogrammet som du skal bruke til å teste ut
+klassen <code>Sirkel</code>.
+Din oppgave er også her å erstatte pseudokoden med java-instruksjoner. <br>
+
+<pre>
+<  nødvendig(e) import-setning(er)  >
+
+public class SirkelTest
+{
+  public static void main(String[] args)
+  {
+    <  Les inn sirkelens radius fra brukeren. >
+
+    <  Så lenge radius er positiv:
+       Opprett et Sirkel-objekt, som ved opprettelsen blir tilført
+       den radius som brukeren har skrevet inn.
+       Skriv sirkelens radius, diameter, omkrets og areal ut på skjermen
+       ved å bruke en eller flere metoder i Sirkel-klassen.
+       Les inn sirkelens radius på nytt fra brukeren. >
+
+  }
+} // end of class SirkelTest
+
+</pre>
+<p />
+Innlesing av radius og utskrift av radius, diameter, omkrets og areal skal foretas gjentatte ganger,
+inntil det leses inn en verdi som gjør betingelsen usann.<br>
+Bruk dialogvinduer til både innlesing og utskrift.
+(Utskrift av radius, diameter, omkrets og areal kan gjøres i en og samme dialogvindu.) <br>
+NB! Klassene må skrives på hver sin fil. Opprett en mappe som heter Sirkel, og legg begge filene i den.
+
+
+<p /> Hvis dere trenger hjelp, kan dere få hjelp av studentassistentene på datalaben:<br><br>
+<a href = "http://www.iu.hio.no/~evav/ProgrammeringH2013/CH/Christian.html">Christian</a>:
+mandager kl 12:45 - 14:30  på rom PH424 og torsdager på kl 12:45 - 14:30 på rom PH461<br>
+<a href = "http://www.iu.hio.no/~evav/ProgrammeringH2013/KJ/kristian.html">Kristian</a> :
+mandager og torsdager kl 12:45 - 14:30 på rom PH422.
+
+<p /><h3>Lykke til!</h3>
+
+</body>
+</html>
