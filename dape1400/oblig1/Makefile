@@ -4,7 +4,8 @@ java = java -cp $(CLASSPATH)
 
 testclasses = $(patsubst %.java,%.class,$(wildcard *Test.java))
 classes = $(filter-out $(testclasses),$(patsubst %.java,%.class,$(wildcard *.java)))
-tests = $(patsubst %.class,%,$(testclasses))
+tests = $(basename $(testclasses))
+tarfile = $(shell basename $(shell pwd)).tar.gz
 
 %.class: %.java
 	$(javac) $<
@@ -17,6 +18,9 @@ default: $(classes)
 test: $(tests)
 
 clean:
-	rm -f *.class
+	rm -f $(classes) $(tests) $(tarfile)
+
+tarfile:
+	find -iname '*.java' -print0 | xargs --null tar -cvzf $(tarfile) Makefile
 
 .PHONY: default test clean $tests
