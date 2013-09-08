@@ -24,6 +24,9 @@ Tilbake:
 1 20-krone
 2 1-kroner
 
+Matias: Lærerens eksempel over er nok feil. 100 - 27 = 73, dvs at det
+        skal gis tilbake 3 1-kroner, ikke 2.
+
 (Hint: Uttrykk først tilbakebeløpet i antall femtiører. Leser du inn
 beløpet som et desimaltall, vil du da få bruk for å typekonvertere til
 heltall ved å skrive (int) foran det som skal konverteres. Bruk
@@ -44,4 +47,38 @@ Ekstra utfordring:
 
 public class Change
 {
+    public static String change( double paid )
+    {
+        return split( 100 - paid );
+    }
+
+    public static String split( double money )
+    {
+        long fifties, twenties, tens, fives, ones;
+        String response = "Tilbake:\n";
+
+        ones = Math.round(money);
+
+        fifties = ones / 50;
+        ones %= 50;
+        twenties = ones / 20;
+        ones %= 20;
+        tens = ones / 10;
+        ones %= 10;
+        fives = ones / 5;
+        ones %= 5;
+
+        if ( fifties > 0 )
+            response += fifties + " 50-lapp" + ( fifties > 1 ? "er" : "") + "\n";
+        if ( twenties > 0 )
+            response += twenties + " 20-krone" + ( twenties > 1 ? "r" : "") + "\n";
+        if ( tens > 0 )
+            response += tens + " 10-krone" + ( tens > 1 ? "r" : "") + "\n";
+        if ( fives > 0 )
+            response += fives + " 5-krone" + ( fives > 1 ? "r" : "") + "\n";
+        if ( ones > 0 )
+            response += ones + " 1-krone" + ( ones > 1 ? "r" : "") + "\n";
+
+        return response;
+    }
 }
