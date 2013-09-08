@@ -47,18 +47,26 @@ Ekstra utfordring:
 
 public class Change
 {
-    public static String change( double paid )
+    public static String change( double price, double paid )
     {
-        return split( 100 - paid );
+        return split( price - paid );
     }
 
     public static String split( double money )
     {
-        long fifties, twenties, tens, fives, ones;
+        long thousands, fivehundreds, twohundreds, hundreds, fifties, twenties, tens, fives, ones;
         String response = "Tilbake:\n";
 
         ones = Math.round(money);
 
+        thousands = ones / 1000;
+        ones %= 1000;
+        fivehundreds = ones / 500;
+        ones %= 500;
+        twohundreds = ones / 200;
+        ones %= 200;
+        hundreds = ones / 100;
+        ones %= 100;
         fifties = ones / 50;
         ones %= 50;
         twenties = ones / 20;
@@ -68,6 +76,15 @@ public class Change
         fives = ones / 5;
         ones %= 5;
 
+
+        if ( thousands > 0 )
+            response += thousands + " 1000-lapp" + ( fifties > 1 ? "er" : "") + "\n";
+        if ( fivehundreds > 0 )
+            response += fivehundreds + " 500-lapp" + ( fivehundreds > 1 ? "er" : "") + "\n";
+        if ( twohundreds > 0 )
+            response += twohundreds + " 200-lapp" + ( twohundreds > 1 ? "er" : "") + "\n";
+        if ( hundreds > 0 )
+            response += hundreds + " 100-lapp" + ( hundreds > 1 ? "er" : "") + "\n";
         if ( fifties > 0 )
             response += fifties + " 50-lapp" + ( fifties > 1 ? "er" : "") + "\n";
         if ( twenties > 0 )
@@ -80,5 +97,10 @@ public class Change
             response += ones + " 1-krone" + ( ones > 1 ? "r" : "") + "\n";
 
         return response;
+    }
+
+    public static void main ( String[] args )
+    {
+        
     }
 }
