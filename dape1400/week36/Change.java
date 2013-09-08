@@ -76,6 +76,7 @@ public class Change
         fives = ones / 5;
         ones %= 5;
 
+        // There will only ever be one of 500, 100, 50, 10 and 5
 
         if ( thousands > 0 )
             response += thousands + " 1000-lapp" + ( fifties > 1 ? "er" : "") + "\n";
@@ -84,15 +85,15 @@ public class Change
         if ( twohundreds > 0 )
             response += twohundreds + " 200-lapp" + ( twohundreds > 1 ? "er" : "") + "\n";
         if ( hundreds > 0 )
-            response += hundreds + " 100-lapp" + ( hundreds > 1 ? "er" : "") + "\n";
+            response += hundreds + " 100-lapp\n";
         if ( fifties > 0 )
-            response += fifties + " 50-lapp" + ( fifties > 1 ? "er" : "") + "\n";
+            response += fifties + " 50-lapp\n";
         if ( twenties > 0 )
             response += twenties + " 20-krone" + ( twenties > 1 ? "r" : "") + "\n";
         if ( tens > 0 )
-            response += tens + " 10-krone" + ( tens > 1 ? "r" : "") + "\n";
+            response += tens + " 10-krone\n";
         if ( fives > 0 )
-            response += fives + " 5-krone" + ( fives > 1 ? "r" : "") + "\n";
+            response += fives + " 5-krone\n";
         if ( ones > 0 )
             response += ones + " 1-krone" + ( ones > 1 ? "r" : "") + "\n";
 
