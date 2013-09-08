@@ -30,11 +30,16 @@ public class Sirkel
         return (float) ( Math.PI * Math.pow(radius, 2) );
     }
 
+    public float diameter()
+    {
+        return radius * 2;
+    }
+
     public void vis()
     {
         JOptionPane.showMessageDialog( null,
                                        "Radius: " + radius
-                                       + "\nDiameter: " + ( radius * 2 )
+                                       + "\nDiameter: " + diameter()
                                        + "\nOmkrets: " + omkrets()
                                        + "\nAreal: " + areal());
     }
