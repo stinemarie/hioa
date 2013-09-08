@@ -1,28 +1,59 @@
-<  nødvendige import-setning(er)  >
+import javax.swing.JOptionPane;
 
 public class Konto
 {
-    <  Datafeltene for kontoinnehavers navn, kontornummer og saldo. >
+    private String innehaver, kontonummer;
+    private double saldo;
 
-    <  Kontruktør som skal gi startverdier til ALLE datafeltene  >
+    public Konto ( String innehaver, String kontonummer, double saldo )
+    {
+        this.innehaver = innehaver;
+        this.kontonummer = kontonummer;
+        this.saldo = saldo;
+    }
 
-    <  set-metode for kontoinnehaverens navn >
+    public void setInnehaver( String innehaver )
+    {
+        this.innehaver = innehaver;
+    }
 
-    <  get-metode for kontoinnehaverens navn, kontonummer og saldo  >
+    public String getInnehaver ()
+    {
+        return innehaver;
+    }
 
-    <  Kontoutskrifts-metode, som skriver ut kontoinnehaverens
-       navn, kontonummer og saldo i et dialogvindu. >
+    public String getKontonummer()
+    {
+        return kontonummer;
+    }
 
-    <  Metode som setter inn et beløp på kontoen.
-       Beløpets størrelse skal tas imot via en parameter til metoden.
-       Metoden skal returnere en tekst som inneholder informasjon om
-       den nye saldoen.  >
+    public double getSaldo()
+    {
+        return saldo;
+    }
 
-    <  Metode som tar ut et beløp fra kontoen, under forutsetning av
-       at det er dekning for beløpet.
-       Uttaks-beløpets størrelse skal tas imot via en parameter til metoden.
-       Hvis det er dekning på kontoen, skal metoden returnere en tekst
-       med informasjon om den nye saldoen. Hvis  det ikke er dekning,
-       skal den returnerte teksten inneholde informasjon om det. >
+    public void kontoutskrift()
+    {
+        JOptionPane.showMessageDialog(null,
+                                      "Innehaver: " + innehaver
+                                      + "\nkontonummer: " + kontonummer
+                                      + "\nSaldo: " + saldo);
+    }
 
+    public String settInn(double beløp)
+    {
+        saldo += beløp;
+        return "Satt inn " + beløp + " på konto " + kontonummer + "\nNy saldo: " + saldo;
+    }
+
+    public String taUt(double beløp)
+    {
+        if ( saldo >= beløp )
+        {
+            saldo -= beløp;
+            return "Tok ut " + beløp + " fra " + kontonummer + "\nNy saldo: " + saldo;
+        }
+        else
+            return "Det er ikke dekning på kontoen.";
+    }
 } // end of class Konto
