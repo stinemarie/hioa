@@ -45,11 +45,18 @@ Ekstra utfordring:
    seddeltypene.
  */
 
+import javax.swing.JOptionPane;
+
 public class Change
 {
-    public static String change( double price, double paid )
+    public static String change( double paid, double price )
     {
-        return split( price - paid );
+        if ( paid < price )
+            return "Kunden har betalt for lite.";
+        else if ( paid == price )
+            return "Kunden har betalt nøyaktig.";
+        else
+            return split( paid - price );
     }
 
     public static String split( double money )

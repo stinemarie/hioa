@@ -84,4 +84,10 @@ public class ChangeTest
     {
         assertEquals("Tilbake:\n1 1-krone\n", Change.change(100.00, 99.49));
     }
+
+    @Test
+    public void paidTooLittle()
+    {
+        assertEquals( "Kunden har betalt for lite.", Change.change( 100, 150 ) );
+    }
 }
