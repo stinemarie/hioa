@@ -1,17 +1,25 @@
-<  nødvendig(e) import-setning(er)  >
+import javax.swing.JOptionPane;
 
 public class SirkelTest
 {
+    private static float lesRadius()
+    {
+        return Float.parseFloat(JOptionPane.showInputDialog(" Oppgi radius for sirkelen. Negative tall avslutter. "));
+    }
+
     public static void main(String[] args)
     {
-    <  Les inn sirkelens radius fra brukeren. >
+        float radius;
+        Sirkel sirkel;
 
-    <  Så lenge radius er positiv:
-       Opprett et Sirkel-objekt, som ved opprettelsen blir tilført
-       den radius som brukeren har skrevet inn.
-       Skriv sirkelens radius, diameter, omkrets og areal ut på skjermen
-       ved å bruke en eller flere metoder i Sirkel-klassen.
-       Les inn sirkelens radius på nytt fra brukeren. >
+        radius = lesRadius();
+
+        while ( radius > 0 )
+        {
+            sirkel = new Sirkel(radius);
+            sirkel.vis();
+            radius = lesRadius();
+        }
 
     }
 } // end of class SirkelTest

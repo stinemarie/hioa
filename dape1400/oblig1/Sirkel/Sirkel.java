@@ -1,22 +1,42 @@
-<  nødvendig(e) import-setning(er)  >
+import javax.swing.JOptionPane;
 
 public class Sirkel
 {
-    <  Datafelt for sirkelens radius. >
+    private float radius;
 
-    <  Konstruktør som skal gi startverdi til sirkelens radius.
-        NB! Hvis startverdien er negativ, skal radius settes til 0. >
+    public Sirkel ( float radius )
+    {
+        this.radius = ( radius >= 0 ) ? radius : 0;
+    }
 
-    <  set-metode for sirkelens radius. >
+    public void setRadius( float radius )
+    {
+        this.radius = radius;
+    }
 
-    <  get-metode for sirkelens radius.  >
+    public float getRadius()
+    {
+        return radius;
+    }
 
-    <  Metode som beregner og returnerer sirkelens omkrets.  >
+    public float omkrets()
+    {
+        // Math.PI is a double, but radius is a float.
+        return 2 * ( (float) Math.PI ) * radius;
+    }
 
-    <  Metode som beregner og returnerer sirkelens areal.  >
+    public float areal()
+    {
+        return (float) ( Math.PI * Math.pow(radius, 2) );
+    }
 
-    <  Metode som viser sirkelens radius, diameter, omkrets
-       og areal i et dialogvindu. NB! Du SKAL bruke klassens
-       metoder for å beregne disse verdiene. >
+    public void vis()
+    {
+        JOptionPane.showMessageDialog( null,
+                                       "Radius: " + radius
+                                       + "\nDiameter: " + ( radius * 2 )
+                                       + "\nOmkrets: " + omkrets()
+                                       + "\nAreal: " + areal());
+    }
 
 } // end of class Sirkel
