@@ -1,0 +1,157 @@
+<?xml version ="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>
+Programmering H2013 &#8212; oppgaver til uke 36
+</title>
+<link rel="stylesheet"
+      type="text/css"
+      href="http://www.iu.hio.no/~kjetilg/Undervisningsstoff/oppgaver.css">
+</head>
+<body>
+<h3>Programmering H2013 &#8212; oppgaver til uke 36</h3>
+</p>
+
+
+
+
+
+<h3>Oppgave 1</h3>
+<p />Modifiser klassen <code>Kursbok4</code> i Introduksjon til programmering,
+<a href="http://www.iu.hio.no/~kjetilg/uvstoff/intro/kap3.html#janei">kapittel 3, eksempel 4</a>
+på følgende måte:
+<ol type="a">
+  <li>Tilføy (deklarer) tre ekstra datafelt, et for kursets kurskode, et for antall studiepoeng
+    og et for navnet på kursets faglærer.</li>
+  <li>Skriv en konstruktør som gir startverdier til ALLE datafeltene i klassen.
+  Konstruktøren skal ha fire parametre, (en for kursnavnet, en for kurskoden,
+     en for antall studiepoeng og en for navnet på faglærer) </li>
+
+  <li>Tilføy <code>set</code>- og <code>get</code>-metoder for de nye datafeltene.</li>
+
+  <li>Modifiser <code>visTittel</code>-metoden slik at også kurskoden, antall studiepoeng og
+  navnet på fagelærer for kurset skrives ut i dialogvinduet.  Fordel utskriften over flere linjer.</li>
+</ol>
+
+<p />Lag et testprogram som bruker den nye klassen din og den nye funksjonaliteten
+den har.<br> Programmet skal opprette et <code>Kursbok4</code>-objekt, som ved opprettelsen (via konstruktørens parametre)
+gir datafeltene i <code>Kursbok4</code>-objektet startverdier.<br>
+
+Skriv så disse dataene ut på skjermen
+ved hjelp av <code>visTittel</code>-metoden. <br>
+
+Tenk det nå at kurset du har lagret vedier for skal skifte navn, kurskode, antall studiepoeng og lærer, og at
+det  derfor må foretas ny innlesing av disse verdiene. Bruk <code>set</code>-metodene til å sørge for at de nye verdiene blir lagret i
+<code>Kursbok4</code>-objektets datafelt. <br>
+Til slutt skal programmet vise på skjermen hva som nå er blitt registrert i <code>Kursbok4</code>-objektet.
+
+
+
+
+<h3><a name ="oppg3">Oppgave 2</a></h3>
+<p />
+Nedenfor ser du en skisse i pseudokode av klassen <code>Konto</code>.
+Din oppgave er å erstatte pseudokoden med java-instruksjoner.
+NB! De to siste metodene er frivillige å ta med.
+
+<pre>
+
+<  nødvendige import-setning(er)  >
+
+public class Konto
+{
+    <  Datafeltene for kontoinnehavers navn, kontornummer og saldo. >
+
+    <  Kontruktør som skal gi startverdier til ALLE datafeltene  >
+
+    <  set-metode for kontoinnehaverens navn >
+
+    <  get-metode for kontoinnehaverens navn, kontonummer og saldo  >
+
+    <  Kontoutskrifts-metode, som skriver ut kontoinnehaverens
+       navn, kontonummer og saldo i et dialogvindu. >
+
+    <  Metode som setter inn et beløp på kontoen.
+       Beløpets størrelse skal tas imot via en parameter til metoden.
+       Metoden skal returnere en tekst som inneholder informasjon om
+       den nye saldoen.  >
+
+    <  Metode som tar ut et beløp fra kontoen, under forutsetning av
+       at det er dekning for beløpet.
+       Uttaks-beløpets størrelse skal tas imot via en parameter til metoden.
+       Hvis det er dekning på kontoen, skal metoden returnere en tekst
+       med informasjon om den nye saldoen. Hvis  det ikke er dekning,
+       skal den returnerte teksten inneholde informasjon om det. >
+
+} // end of class Konto
+
+</pre>
+
+
+
+<p />
+Nedenfor ser du en skisse hovedprogrammet som du skal bruke til å teste ut
+klassen <code>Konto</code>.
+Din oppgave er også her å erstatte pseudokoden med java-instruksjoner. <br>
+
+<pre>
+<  nødvendige import-setning(er)  >
+
+public class Kontotest
+{
+  public static void main(String[] args)
+  {
+    <  Opprett to Konto-objekter, som ved opprettelsen blir tilført
+       hvert sitt navn, hvert sitt kontonummer og hver sin saldo. >
+
+    <  Test ut ALLE metodene du har laget i Konto-klassen på
+       Konto-objektene. Skriv resultatene ut på skjermen.
+       Bruk dialogvinduer til både innlesing og utskrift. >
+
+  }
+} // end of class Kontotest
+
+</pre>
+<p />
+NB! Klassene må skrives på hver sin fil. Opprett en mappe som heter Konto, og legg begge filene i den.
+
+
+<h3>Oppgave 3: Veksleautomat</h3>
+<p />Skriv et program som finner ut hva som skal gis tilbake av vekslepenger når
+det betales med en hundrelapp for et beløp som er mindre enn 100 kroner.
+Beløpet som skal betales skal programmet lese inn. Du kan forutsette at
+beløpet er avrundet til nærmeste krone. Vekslepenger skal
+angis i form av en utskrift. De skal være i størst mulige myntenheter.
+Myntenheter som ikke er med i tilbakebetalingen skal ikke tas med i utskriften.
+(Utskriften skal f.eks. ikke inneholde noe slikt som "0 5-kroner".)
+Lag også utskriften slik at den skiller mellom entall og flertall på den måten
+at det skrives f.eks. "1 1-krone", men "2 1-kroner".
+Dersom f.eks.
+beløpet som skal betales er kr. 27.00,  skal utskriften være omtrent
+som følger:</p>
+<P>Tilbake:<br>
+1 50-lapp<br>
+1 20-krone<br>
+2 1-kroner<br>
+
+
+<P>(Hint: Uttrykk først tilbakebeløpet i antall femtiører.
+Leser du inn beløpet som et desimaltall, vil du da få bruk for
+å typekonvertere til heltall ved å skrive (int) foran det som skal
+konverteres. Bruk operatorene / og % for suksessivt å finne ut hvor mange
+det blir av 50-lapper, 20-kroner etc.)</P>
+<P>Ekstra utfordring: Modifiser programmet slik at korrekt avrunding til
+nærmeste krone blir foretatt på tilbakebetalingsbeløpet.
+(En kan da skrive inn vilkårlige beløp opp til 100.) Utvid programmet
+slik at det ikke er begrenset til beløp under 100 kr. Da må innbetalt
+beløp leses inn i tillegg til beløpet som skal betales. Dessuten
+må du i tillegg til 50-lapp ta med de andre seddeltypene.</P>
+
+
+
+
+</body>
+</html>
