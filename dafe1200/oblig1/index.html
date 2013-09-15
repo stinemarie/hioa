@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Matias's netthjem</title>
+  </head>
+  <body>
+    <header id="top">
+      <h1>Matias Hermanrud Fjeld</h1>
+      <nav>
+        <ul>
+          <!-- Dette teller vel som interne lenker? 
+
+               Jeg kunne også skrevet
+               <a href="sjonglering.html">Mer om sjonglering</a>
+               og lagt mer i et eget dokument, men jeg hadde lyst
+               til å forsøke meg på en stor side med
+               id-lenker og tilsvarende css.
+
+               evt. href="index.html#ommeg"
+               eller href="./index.html#ommeg"
+               -->
+          <li><a href="#ommeg">Om meg</a>
+          <li><a href="#sjonglering">Sjonglering</a></li>
+          <li><a href="#kravmaga">Krav Maga</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="ommeg">
+      <h2>Om meg</h2>
+
+      <p>
+        Jeg er student ved <a href="http://www.hioa.no/">Høgskolen i
+        oslo og akershus</a>, og i
+        <a href="https://github.com/hioa-cs/webprosjekt/blob/master/oppgaver/Oblig1.md">
+          den forbindelse
+        </a>
+        har jeg laget denne nettsiden.  Her står det litt om meg og
+        noen av interessene mine.
+      </p>
+
+      <p>
+        For de av mine medstudenter som tar en titt innom, velkommen!
+        Hvis du ikke har sagt hei til meg i forelesning, gjør det.
+        Jeg har
+        en <a href="http://facebook.com/matiashf">Facebook-profil</a>
+        der man kan se hvilke bilder av søte katter jeg
+        liker, <abbr title="og så videre">osv</abbr>. I tillegg legger
+        jeg ut arbeidet mitt
+        på <a href="http://www.github.com/matiashf/hioa">GitHub</a>.
+      </p>
+
+      <figure id="mugshot">
+        <img src="mugshot.jpg" alt="Portrettbilde av meg med hodetelefoner på" />
+        <figcaption>Jeg liker å <a href="http://www.last.fm/user/matiashf">høre på musikk</a>.</figcaption>
+      </figure>
+
+    </section>
+
+    <section id="hobbier">
+      <h2>Hobbier</h2>
+
+      <section id="sjonglering">
+        <h3>Sjonglering</h3>
+
+        <p>
+          Når jeg var i ungdomsskole-alder fikk jeg tre
+          sjongleringsballer i gave av moren min. Jeg hadde aldri
+          sjonglert før, men fant fort ut at det var noe jeg
+          likte. Siden den gang har jeg lært meg å sjonglere med alt
+          fra en til fem baller, inntil tre kjegler (også brennende),
+          samt å blåse flammer.
+        </p>
+
+        <figure>
+          <video src="sjonglering.webm" controls />
+          <figcaption>Slik ser det ut når jeg sjonglerer</figcaption>
+        </figure>
+
+        <aside>
+          <h4>Fakta om sjonglering</h2>
+          <ul>
+            <li>
+              <a href="http://en.wikipedia.org/wiki/The_Encyclop%C3%A6dia_of_Ball_Juggling">
+                The Encyclopædia of Ball Juggling
+              </a>
+              hevder at når man klarer 20 kast i en tre-balls
+              <a href="http://no.wikipedia.org/wiki/Kaskade_(sjonglering)">kaskade</a>,
+              så kan man kalle seg sjonglør.
+            </li>
+            <li>
+              Å spise et eple mens man sjonglerer er vanskelig også
+               for sjonglører. Det er ganske ubehagelig å
+               «styrte-spise» et eple!
+            </li>
+            <li>
+               Det er ofte ikke samsvar mellom hva som ser bra ut for
+               publikum og hva som ser bra ut for sjonglører. Det
+               finnes mange veldig dyktige, tekniske sjonglører som er
+               kjedelige å se på for ikke-sjonglører.
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="kravmaga">
+        <h3>Krav Maga</h3>
+
+        <p>
+          Sommeren 2011 begynte jeg å
+          trene <a href="http://en.wikipedia.org/wiki/Krav_Maga">Krav
+          Maga</a>. Det ligner kampsport, men har som mål å lære bort
+          selvforsvar heller enn å trene utøvere til
+          konkurranser. Treningen har stort fokus på stressmestring,
+          og dette har jeg hatt godt utbytte av ellers i livet.
+        </p>
+
+        <p>
+          Krav maga har et grad-system lignende andre kampsporter, men
+          har ikke belter. Utøvere går gjennom en gradering før hvert
+          nytt nivå, der de viser at de har lært teknikkene de skal
+          kunne.
+        </p>
+
+        <table>
+          <caption>Eksempeler på krav-maga teknikker som læres bort ved forskjellige grader.</caption>
+          <thead>
+            <tr>
+              <th>
+                Nivå
+              </th>
+              <th>
+                Angrepsteknikk
+              </th>
+              <th>
+                Forsvar mot...
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>P1</th>
+              <td>Rette slag og spark</td>
+              <td>Enkle angrep forfra</td>
+            </tr>
+            <tr>
+              <th>P2</th>
+              <td>Sirkulære angrep i forkjellig retning</td>
+              <td>Enkle angrep fra siden og bakfra</td>
+            </tr>
+            <tr>
+              <th>P3</th>
+              <td>Mer avanserte spark</td>
+              <td>Å bli grepet eller holdt</td>
+            </tr>
+            <tr>
+              <th>P4</th>
+              <td>Fortsettelse når første teknikk feiler</td>
+              <td>Enkle angrep med slagvåpen</td>
+            </tr>
+            <tr>
+              <th>P5</th>
+              <td><em>Kun forsvarsteknikker på dette nivået</em></td>
+              <td>Forsvar av en venn som blir angrepet</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+    </section>
+
+    <footer>
+      <address><a href="mailto:mhf@hex.no">mhf@hex.no</a></address>
+    </footer>
+  </body>
+</html>
