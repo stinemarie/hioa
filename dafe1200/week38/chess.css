@@ -1,0 +1,92 @@
+body {
+    background-color: gray;
+}
+
+table.chessboard {
+    border-collapse: collapse;
+}
+
+table.chessboard td, table.chessboard th {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    text-align: center;
+}
+
+table.chessboard td.black {
+    background-color: #D18B47;
+}
+
+table.chessboard td.white {
+    background-color: #FFCE9E;
+}
+
+@media screen and (max-width: 500px) {
+    table.chessboard {
+        width: 380px;
+        height: 380px;
+    }
+    table.chessboard th, table.chessboard td {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+    table.chessboard {
+        width: 480px;
+        height: 480px;
+    }
+    table.chessboard th, table.chessboard td {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    table.chessboard {
+        width: 580px;
+        height: 580px;
+    }
+    table.chessboard th, table.chessboard td {
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+    table.chessboard {
+        width: 680px;
+        height: 680px;
+    }
+    table.chessboard th, table.chessboard td {
+        font-size: 60px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+    table.chessboard {
+        width: 780px;
+        height: 780px;
+    }
+    table.chessboard th, table.chessboard td {
+        font-size: 70px;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+    table.chessboard {
+        width: 880px;
+        height: 880px;
+    }
+    table.chessboard th, table.chessboard td {
+        font-size: 80px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    table.chessboard {
+        width: 990px;
+        height: 990px;
+    }
+    table.chessboard th, table.chessboard td {
+        font-size: 90px;
+    }
+}
