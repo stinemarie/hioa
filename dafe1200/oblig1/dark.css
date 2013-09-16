@@ -1,0 +1,49 @@
+header, article, footer {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul:before {
+    content: "Lenker: ";
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+nav ul li:before {
+    content: ", ";
+}
+
+nav ul li:first-child:before {
+    content: none;
+}
+
+body {
+    background-color: #212121;
+    color: #D0FFD0;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #F60;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #C96;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #FC0;
+}
+
+figure, figure img, figure video {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
