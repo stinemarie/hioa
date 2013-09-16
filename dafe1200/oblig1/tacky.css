@@ -4,11 +4,7 @@
 
 /* Tacky gradient */
 body {
-    /* From http://webdesignerwall.com/tutorials/cross-browser-css-gradient */
-    background: #F15A21; /* for non-css3 browsers */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F15A21', endColorstr='#FECA05'); /* for IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#F15A21), to(#FECA05)); /* for webkit browsers */
-    background: -moz-linear-gradient(top,  #F15A21,  #FECA05); /* for firefox 3.6+ */
+    background: #FECA05;
 
 }
 
