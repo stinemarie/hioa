@@ -1,7 +1,10 @@
+/* Tacky font */
+
 @import url(http://fonts.googleapis.com/css?family=Quantico:400,400italic);
 
+/* Tacky gradient */
 body {
-    /* http://webdesignerwall.com/tutorials/cross-browser-css-gradient */
+    /* From http://webdesignerwall.com/tutorials/cross-browser-css-gradient */
     background: #F15A21; /* for non-css3 browsers */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F15A21', endColorstr='#FECA05'); /* for IE */
     background: -webkit-gradient(linear, left top, left bottom, from(#F15A21), to(#FECA05)); /* for webkit browsers */
@@ -20,6 +23,8 @@ body, a, a:visited, a:hover {
     color: #1688F6;
 }
 
+/* I'll swap out the image for something else. Something 2 cool 4 school. */
+
 #mugshot {
     background: url("shades.jpg") no-repeat;
 }
@@ -36,6 +41,9 @@ body, a, a:visited, a:hover {
     content: "Her kommer tøffe-tøff!";
     visibility: visible;
 }
+
+/* html 5? Yes it is. But it's so wrong. Let's mix it up some
+   more. Off with the neck and foot(er)! */
 
 nav, footer {
     display: none;
