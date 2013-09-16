@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <title>Matias's netthjem</title>
+    <link rel="stylesheet" title="Default" href="default.css" />
+    <link rel="alternate stylesheet" title="Simple" href="simple.css" />
+    <link rel="alternate stylesheet" title="Tacky" href="tacky.css" />
   </head>
   <body>
     <header id="top">
+      <div class="center">
       <h1>Matias Hermanrud Fjeld</h1>
       <nav>
         <ul>
@@ -25,10 +29,18 @@
           <li><a href="#kravmaga">Krav Maga</a></li>
         </ul>
       </nav>
+      </div>
     </header>
+
+    <article>
 
     <section id="ommeg">
       <h2>Om meg</h2>
+
+      <figure id="mugshot">
+        <img src="mugshot.jpg" alt="Portrettbilde av meg med hodetelefoner på" />
+        <figcaption>Jeg liker å <a href="http://www.last.fm/user/matiashf">høre på musikk</a>.</figcaption>
+      </figure>
 
       <p>
         Jeg er student ved <a href="http://www.hioa.no/">Høgskolen i
@@ -51,10 +63,12 @@
         på <a href="http://www.github.com/matiashf/hioa">GitHub</a>.
       </p>
 
-      <figure id="mugshot">
-        <img src="mugshot.jpg" alt="Portrettbilde av meg med hodetelefoner på" />
-        <figcaption>Jeg liker å <a href="http://www.last.fm/user/matiashf">høre på musikk</a>.</figcaption>
-      </figure>
+      <p>
+        Denne siden har alternative stilark. For å prøve de ut kan man
+        i chrome
+        bruke <a href="https://chrome.google.com/webstore/detail/style-chooser/daodklicmmjhcacgkjpianadkdkbkbce">Style
+        Chooser</a>.
+      </p>
 
     </section>
 
@@ -64,6 +78,11 @@
       <section id="sjonglering">
         <h3>Sjonglering</h3>
 
+        <figure id="video">
+          <video src="sjonglering.webm" controls></video>
+          <figcaption>Slik ser det ut når jeg sjonglerer</figcaption>
+        </figure>
+
         <p>
           Når jeg var i ungdomsskole-alder fikk jeg tre
           sjongleringsballer i gave av moren min. Jeg hadde aldri
@@ -72,11 +91,6 @@
           fra en til fem baller, inntil tre kjegler (også brennende),
           samt å blåse flammer.
         </p>
-
-        <figure>
-          <video src="sjonglering.webm" controls></video>
-          <figcaption>Slik ser det ut når jeg sjonglerer</figcaption>
-        </figure>
 
         <aside>
           <h4>Fakta om sjonglering</h4>
@@ -115,6 +129,19 @@
           konkurranser. Treningen har stort fokus på stressmestring,
           og dette har jeg hatt godt utbytte av ellers i livet.
         </p>
+
+        <blockquote cite="http://krav-maga.com/training/what-is-krav-maga">
+          <p>
+            Krav Maga is a practical and tactical system that teaches
+            how to prevent, deal and overcome all kinds of violence
+            and attacks. Krav Maga prepares the trainees in the
+            subjects of self-defense, self-protection, fighting and
+            combat skills, as well as skills to defend others, all in
+            unique and comprehensive teachings and way. Krav Maga was
+            developed in Israel, under realistic demands and
+            conditions.
+          </p>
+        </blockquote>
 
         <p>
           Krav maga har et grad-system lignende andre kampsporter, men
@@ -171,8 +198,16 @@
 
     </section>
 
+    </article>
+
     <footer>
-      <address><a href="mailto:mhf@hex.no">mhf@hex.no</a></address>
+      <div class="center">
+        <address><a href="mailto:mhf@hex.no">mhf@hex.no</a></address>
+
+        <a href="http://www.w3.org/html/logo/">
+          <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-graphics-multimedia-semantics.png" width="229" height="64" alt="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, and Semantics" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, and Semantics" />
+        </a>
+      </div>
     </footer>
   </body>
 </html>

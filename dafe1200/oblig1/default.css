@@ -1,0 +1,228 @@
+@import url(http://fonts.googleapis.com/css?family=Clicker+Script);
+
+body {
+    margin: 0px;
+}
+
+/* The page will be centered */
+header .center, article, footer {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* The header will be fixed to the viewport */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    z-index: 1000;
+    background-color: white;
+}
+
+h2:before, h3:before {
+    /* Insert a dummy element that takes up no space in
+       the flow, but makes the internal links align correctly with
+       respect to the header. */
+    content: "";
+    display: block;
+    /* negative margin-top and positive height is defined below, but it depends on header height */
+}
+
+/* The header height needs to be fixed. We'll make sure the elements
+   it contains are correctly sized. */
+header h1 {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-right: 40px;
+    font-size: 32px;
+    line-height: 38px; 
+}
+
+header ul {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+header
+{
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 4px;
+    border-bottom-width: 1px;
+
+    /* The header only overflows at very low screen widths, but just in case... */
+    overflow: auto;
+}
+
+/* Make space for the absolutely positioned header. The header size
+   varies with viewport width */
+
+@media screen and (min-width: 650px) {
+    header {
+        height: 53px;
+    }
+
+    article {
+        padding-top: 53px;
+    }
+
+    h2:before, h3:before {
+        margin-top: -53px;
+        height: 53px;
+    }
+
+    header .center > * {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /* On narrow displays, the nav menu will render below the h1 element.
+       This will make header taller. */
+
+    header .center > * {
+        display: block;
+    }
+
+    header {
+        height: 83px;
+    }
+
+    article {
+        padding-top: 83px;
+    }
+
+    h2:before, h3:before {
+        margin-top: -83px;
+        height: 83px;
+    }
+
+    
+}
+
+/* Lay out the header elements horizontally */
+
+nav ul li {
+    display: inline;
+    list-style-type: none;
+}
+
+nav ul li:before {
+    content: " | ";
+}
+
+nav ul li:first-child:before {
+    content: none;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+footer .center {
+    text-align: center;
+}
+
+footer .center > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Tone down links */
+
+a, a:visited {
+    text-decoration: none;
+    color: #000066;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Figure layout */
+
+figure video, figure img {
+    /* Makes the child element fit to the figure element. This way we can
+       adjust the figure and the child will follow.*/
+    max-width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    figure#mugshot {
+        max-width: 25%;
+        float:right;
+    }
+
+    figure#video {
+        max-width: 40%;
+        float:right;
+    }
+}
+
+table {
+    min-width: 100%;
+}
+
+/* Blockquote styling from http://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
+
+blockquote:before {
+    content: open-quote;
+    color: #ccc;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote {
+    background-color: #f6f6f6;
+    border-left: 10px solid #cccccc;
+    quotes: "\201C""\201D""\2018""\2019";
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+}
+
+blockquote p {
+    display: inline;
+}
+
+@media screen and (max-width: 600px) {
+    figure {
+        width: 100%;
+        margin: 0px;
+    }
+
+    header, article, footer {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/* Let's add some color */
+header {
+    background: url(green-leaf.jpg) no-repeat center; 
+    background-size: cover;
+}
+
+header, header a, header a:visited, header li:before {
+    color: #203806;
+}
+
+/* Fonts. Yes, fonts! */
+
+html {
+    font-family: sans-serif;
+}
+
+header h1 {
+    font-family: 'Clicker Script', sans-serif;
+}

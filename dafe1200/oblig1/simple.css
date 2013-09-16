@@ -1,0 +1,13 @@
+figure img, figure video {
+    max-width: 100%;
+}
+
+figure#mugshot {
+    float: right;
+    max-width: 150px;
+}
+
+figure#video {
+    max-width: 400px;
+    float: left;
+}
