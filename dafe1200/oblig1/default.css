@@ -209,6 +209,8 @@ blockquote p {
 
 /* Let's add some color */
 header {
+    /* I'd like to do a fixed background, but that triggers a bug in chrome:
+       http://stackoverflow.com/questions/18403662/chrome-having-an-html5-video-position-fixed-or-absolute-causes-all-background */
     background: url(green-leaf.jpg) no-repeat center; 
     background-size: cover;
 }

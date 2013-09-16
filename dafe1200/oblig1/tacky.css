@@ -1,0 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Quantico:400,400italic);
+
+body {
+    /* http://webdesignerwall.com/tutorials/cross-browser-css-gradient */
+    background: #F15A21; /* for non-css3 browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F15A21', endColorstr='#FECA05'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#F15A21), to(#FECA05)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #F15A21,  #FECA05); /* for firefox 3.6+ */
+
+}
+
+header, article {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body, a, a:visited, a:hover {
+    font-family: 'Quantico', sans-serif;
+    color: #1688F6;
+}
+
+#mugshot {
+    background: url("shades.jpg") no-repeat;
+}
+
+#mugshot img {
+    visibility: hidden;
+}
+
+#mugshot figcaption {
+    visibility: hidden;
+}
+
+#mugshot figcaption:before {
+    content: "Her kommer tøffe-tøff!";
+    visibility: visible;
+}
+
+nav, footer {
+    display: none;
+}
