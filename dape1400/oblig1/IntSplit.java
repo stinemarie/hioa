@@ -56,7 +56,7 @@ public class IntSplit
     {
         int n;
 
-        n = Integer.parseInt(JOptionPane.showInputDialog("Enter an integer with up to five digits."));
+        n = Integer.parseInt(JOptionPane.showInputDialog("Enter an integer."));
         JOptionPane.showMessageDialog(null, split(n));
     }
 }
