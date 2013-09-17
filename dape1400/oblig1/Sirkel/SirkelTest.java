@@ -7,14 +7,14 @@ import javax.swing.JOptionPane;
  */
 public class SirkelTest
 {
-    private static float lesRadius()
+    private static double lesRadius()
     {
-        return Float.parseFloat(JOptionPane.showInputDialog(" Oppgi radius for sirkelen. Negative tall avslutter. "));
+        return Double.parseDouble(JOptionPane.showInputDialog(" Oppgi radius for sirkelen. Negative tall avslutter. "));
     }
 
     public static void main(String[] args)
     {
-        float radius;
+        double radius;
         Sirkel sirkel;
 
         radius = lesRadius();

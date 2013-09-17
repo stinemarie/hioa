@@ -8,35 +8,34 @@ import javax.swing.JOptionPane;
  */
 public class Sirkel
 {
-    private float radius;
+    private double radius;
 
-    public Sirkel ( float radius )
+    public Sirkel ( double radius )
     {
         this.radius = ( radius >= 0 ) ? radius : 0;
     }
 
-    public void setRadius( float radius )
+    public void setRadius( double radius )
     {
         this.radius = radius;
     }
 
-    public float getRadius()
+    public double getRadius()
     {
         return radius;
     }
 
-    public float omkrets()
+    public double omkrets()
     {
-        // Math.PI is a double, but radius is a float.
-        return 2 * ( (float) Math.PI ) * radius;
+        return 2 * Math.PI * radius;
     }
 
-    public float areal()
+    public double areal()
     {
-        return (float) ( Math.PI * Math.pow(radius, 2) );
+        return Math.PI * Math.pow(radius, 2);
     }
 
-    public float diameter()
+    public double diameter()
     {
         return radius * 2;
     }
