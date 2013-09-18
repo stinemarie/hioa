@@ -5,7 +5,11 @@ var Chess = {
   },
 
  init : function() {
-    $(".chessboard td .piece").draggable();
+    $(".chessboard td .piece").draggable({start: Chess.start});
+  },
+
+ start: function( event, ui ) {
+    var piece = $(event.element);
     $(".chessboard td").droppable({ over: Chess.over, out: Chess.out, drop: Chess.drop });
   },
 
@@ -28,6 +32,7 @@ var Chess = {
     $(event.target).append(ui.draggable.detach()); // Insert new piece
     ui.draggable.css("top", "0px");
     ui.draggable.css("left", "0px");
+    $(".chessboard td").droppable("destroy");
   },
 
  discard: function( piece ) {
