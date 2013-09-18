@@ -21,6 +21,10 @@ table.chessboard td.white {
     background-color: #FFCE9E;
 }
 
+table.chessboard td.over {
+    background-color: blue;
+}
+
 @media screen and (max-width: 500px) {
     table.chessboard {
         width: 380px;
