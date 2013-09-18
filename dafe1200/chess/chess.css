@@ -59,10 +59,21 @@ table.chessboard td.over {
 }
 
 .discarded {
-    float: right;
-    width: 200px;
+    width: 100px;
     height: 400px;
     margin-top: 50px;
+}
+
+.discarded.black {
+    float: left;
+}
+
+.discarded.white {
+    float: right;
+}
+
+.discarded.black .piece {
+    float: right;
 }
 
 .chessboard .piece {
