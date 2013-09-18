@@ -64,3 +64,11 @@ table.chessboard td.over {
     height: 400px;
     margin-top: 50px;
 }
+
+.chessboard .piece {
+    cursor: move;
+}
+
+.discarded .piece {
+    cursor: default;
+}
