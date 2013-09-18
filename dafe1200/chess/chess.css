@@ -25,72 +25,13 @@ table.chessboard td.over {
     background-color: blue;
 }
 
-@media screen and (max-width: 500px) {
-    table.chessboard {
-        width: 380px;
-        height: 380px;
-    }
-    table.chessboard th, table.chessboard td {
-        font-size: 30px;
-    }
+.chessboard td, .chessboard th, .chessboard .piece{
+    width: 50px;
+    height: 50px;
 }
 
-@media screen and (min-width: 500px) and (max-width: 600px) {
-    table.chessboard {
-        width: 480px;
-        height: 480px;
-    }
-    table.chessboard th, table.chessboard td {
-        font-size: 40px;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 700px) {
-    table.chessboard {
-        width: 580px;
-        height: 580px;
-    }
-    table.chessboard th, table.chessboard td {
-        font-size: 50px;
-    }
-}
-
-@media screen and (min-width: 700px) and (max-width: 800px) {
-    table.chessboard {
-        width: 680px;
-        height: 680px;
-    }
-    table.chessboard th, table.chessboard td {
-        font-size: 60px;
-    }
-}
-
-@media screen and (min-width: 800px) and (max-width: 900px) {
-    table.chessboard {
-        width: 780px;
-        height: 780px;
-    }
-    table.chessboard th, table.chessboard td {
-        font-size: 70px;
-    }
-}
-
-@media screen and (min-width: 900px) and (max-width: 1000px) {
-    table.chessboard {
-        width: 880px;
-        height: 880px;
-    }
-    table.chessboard th, table.chessboard td {
-        font-size: 80px;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    table.chessboard {
-        width: 990px;
-        height: 990px;
-    }
-    table.chessboard th, table.chessboard td {
-        font-size: 90px;
-    }
+.piece {
+    display: inline-block;
+    font-size: 50px;
+    line-height: 50px;
 }
