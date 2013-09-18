@@ -14,6 +14,9 @@ var Chess = {
 
  drop: function( event, ui ) {
     $(event.target).removeClass('over');
+    $(event.target).append(ui.draggable.detach());
+    ui.draggable.css("top", "0px");
+    ui.draggable.css("left", "0px");
   }
 };
 
