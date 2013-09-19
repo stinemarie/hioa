@@ -1,6 +1,6 @@
 var Chessboard = {
  init : function() {
-    $(".chessboard td .piece").draggable({start: Chessboard.start});
+    $(".chessboard td .piece").draggable({ start: Chessboard.start, revert: "invalid" });
   },
 
  start: function( event, ui ) {
