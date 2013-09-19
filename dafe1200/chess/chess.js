@@ -57,7 +57,7 @@ var Piece = (function() {
     };
 
     Piece.prototype.color = function() {
-      piece = this.element.text();
+      var piece = this.element.text();
       var color;
       jQuery.each(Piece.colors, function( c, pieces ) {
           if ( jQuery.inArray(piece, pieces) >= 0 )
@@ -67,7 +67,7 @@ var Piece = (function() {
     };
 
     Piece.prototype.type = function() {
-      piece = this.element.text();
+      var piece = this.element.text();
       var type;
       jQuery.each(Piece.types, function( t, pieces ) {
           if ( jQuery.inArray(piece, pieces) >= 0 )
