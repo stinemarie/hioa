@@ -4,7 +4,7 @@ var Chessboard = {
   },
 
  start: function( event, ui ) {
-    var piece = new Piece(event.element);
+    var piece = new Piece(this);
     piece.legalMoves().droppable({ over: Chessboard.over, out: Chessboard.out, drop: Chessboard.drop });
   },
 
