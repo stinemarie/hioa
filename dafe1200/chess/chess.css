@@ -43,8 +43,16 @@ table.chessboard td.white {
     background-color: #FFCE9E;
 }
 
-table.chessboard td.over {
+table.chessboard td.over.over.over { /* .over.over.over instead of just .over to increase specificity */
     background-color: blue;
+}
+
+table.chessboard td.ui-droppable.white {
+    background-color: lightblue;
+}
+
+table.chessboard td.ui-droppable.black {
+    background-color: darkblue;
 }
 
 .chessboard td, .chessboard th, .chessboard .piece{

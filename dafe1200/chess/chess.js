@@ -19,7 +19,7 @@ var Chess = {
 
  start: function( event, ui ) {
     var piece = $(event.element);
-    $(".chessboard td").droppable({ over: Chess.over, out: Chess.out, drop: Chess.drop });
+    Chess.legalMoves(piece).droppable({ over: Chess.over, out: Chess.out, drop: Chess.drop });
   },
 
  over: function( event, ui ) {
@@ -68,6 +68,15 @@ var Chess = {
           type = t;
       });
     return type;
+  },
+
+ legalMoves: function( piece ) {
+    var color = Chess.color( piece );
+
+    switch ( Chess.type( piece ) ) {
+    default:
+      return $(".chessboard td");
+    }
   },
 };
 
