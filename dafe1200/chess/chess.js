@@ -83,6 +83,7 @@ var Piece = (function() {
 
     Piece.prototype.legalMoves = function() {
       var pos = this.position();
+      var color = this.color();
       var moves = jQuery(); // empty set
 
       switch ( this.type() ) {
@@ -92,7 +93,6 @@ var Piece = (function() {
                 if ( ( i != j ) && ( -i != j )
                      && ( 0 <=  pos.row + i ) && ( pos.row + i <= 7 )
                      && ( 0 <= pos.col + j ) && ( pos.col + j <= 7 ) ) {
-                  console.debug(i + " " + j + " " + (pos.row + i) + " " + (pos.col + j));
                   moves = moves.add($(".chessboard ").find('tr:has(td)').eq(pos.row + i).find('td').eq(pos.col + j));
                 }
               });
@@ -101,7 +101,13 @@ var Piece = (function() {
       default:
         moves = $(".chessboard td");
       }
-      return moves;
+
+      return moves.filter( function( i ) {
+          if ( $(this).is(":empty") )
+            return true;
+          else
+            return new Piece($(this).find('.piece')).color() != color;
+        });
     };
 
     return Piece;
