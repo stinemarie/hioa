@@ -1,25 +1,11 @@
-var Chess = {
- colors: {
-  white: ["\u2654", "\u2655", "\u2656", "\u2657", "\u2658", "\u2659"],
-  black: ["\u265A", "\u265B", "\u265C", "\u265D", "\u265E", "\u265F"],
-  },
-
- types: {
-  king: ["\u2654", "\u265A"],
-  queen: ["\u2655", "\u265B"],
-  rook: ["\u2656", "\u265C"],
-  bishop: ["\u2657", "\u265D"],
-  knight: ["\u2658", "\u265E"],
-  pawn: ["\u2659", "\u265F"],
-  },
-
+var Chessboard = {
  init : function() {
-    $(".chessboard td .piece").draggable({start: Chess.start});
+    $(".chessboard td .piece").draggable({start: Chessboard.start});
   },
 
  start: function( event, ui ) {
-    var piece = $(event.element);
-    Chess.legalMoves(piece).droppable({ over: Chess.over, out: Chess.out, drop: Chess.drop });
+    var piece = new Piece(event.element);
+    piece.legalMoves().droppable({ over: Chessboard.over, out: Chessboard.out, drop: Chessboard.drop });
   },
 
  over: function( event, ui ) {
@@ -35,7 +21,7 @@ var Chess = {
 
     // Remove old piece
     $(event.target).children().each(function(i) {
-        Chess.discard($(this));
+        new Piece(this).discard();
       });
 
     $(event.target).append(ui.draggable.detach()); // Insert new piece
@@ -43,41 +29,61 @@ var Chess = {
     ui.draggable.css("left", "0px");
     $(".chessboard td").droppable("destroy");
   },
+}
 
- discard: function( piece ) {
-    piece.draggable("destroy"); // Discarded pieces can't be moved
-    piece.detach(); // Remove from board
-    $('.discarded.' + Chess.color(piece)).append(piece); // Add to discarded pile
-  },
+var Piece = (function() {
+    var Piece = function(element) {
+      this.element = $(element);
+    };
 
- color: function( piece ) {
-    piece = piece.text();
-    var color;
-    jQuery.each(Chess.colors, function( c, pieces ) {
-        if ( jQuery.inArray(piece, pieces) >= 0 )
-          color = c;
-      });
-    return color;
-  },
+    Piece.colors = {
+      white: ["\u2654", "\u2655", "\u2656", "\u2657", "\u2658", "\u2659"],
+      black: ["\u265A", "\u265B", "\u265C", "\u265D", "\u265E", "\u265F"],
+    };
 
- type: function( piece ) {
-    piece = piece.text();
-    var type;
-    jQuery.each(Chess.types, function( t, pieces ) {
-        if ( jQuery.inArray(piece, pieces) >= 0 )
-          type = t;
-      });
-    return type;
-  },
+    Piece.types = {
+      king: ["\u2654", "\u265A"],
+      queen: ["\u2655", "\u265B"],
+      rook: ["\u2656", "\u265C"],
+      bishop: ["\u2657", "\u265D"],
+      knight: ["\u2658", "\u265E"],
+      pawn: ["\u2659", "\u265F"],
+    };
 
- legalMoves: function( piece ) {
-    var color = Chess.color( piece );
+    Piece.prototype.discard = function() {
+      this.element.draggable("destroy"); // Discarded pieces can't be moved
+      this.element.detach(); // Remove from board
+      $('.discarded.' + this.color()).append(this.element); // Add to discarded pile
+    };
 
-    switch ( Chess.type( piece ) ) {
-    default:
-      return $(".chessboard td");
-    }
-  },
-};
+    Piece.prototype.color = function() {
+      piece = this.element.text();
+      var color;
+      jQuery.each(Piece.colors, function( c, pieces ) {
+          if ( jQuery.inArray(piece, pieces) >= 0 )
+            color = c;
+        });
+      return color;
+    };
 
-$(document).ready(Chess.init);
+    Piece.prototype.type = function() {
+      piece = this.element.text();
+      var type;
+      jQuery.each(Piece.types, function( t, pieces ) {
+          if ( jQuery.inArray(piece, pieces) >= 0 )
+            type = t;
+        });
+      return type;
+    };
+
+    Piece.prototype.legalMoves = function() {
+      switch ( this.type() ) {
+        default:
+          return $(".chessboard td");
+      }
+    };
+
+    return Piece;
+  }());
+
+$(document).ready(Chessboard.init);
