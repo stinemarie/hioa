@@ -19,8 +19,8 @@ var Chessboard = {
  drop: function( event, ui ) {
     $(event.target).removeClass('over');
 
-    // Remove old piece
-    $(event.target).children().each(function(i) {
+    // Remove old piece if any and not self
+    $(event.target).children().not(ui.draggable).each(function(i) {
         new Piece(this).discard();
       });
 
