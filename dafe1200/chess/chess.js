@@ -1,11 +1,15 @@
 var Chessboard = {
  init : function() {
-    $(".chessboard td .piece").draggable({ start: Chessboard.start, revert: "invalid" });
+    $(".chessboard td .piece").draggable({ start: Chessboard.start, stop: Chessboard.stop, revert: "invalid" });
   },
 
  start: function( event, ui ) {
     var piece = new Piece(this);
     piece.legalMoves().droppable({ over: Chessboard.over, out: Chessboard.out, drop: Chessboard.drop });
+  },
+
+ stop: function( event, ui ) {
+    $(".chessboard td.ui-droppable").droppable("destroy");
   },
 
  over: function( event, ui ) {
@@ -27,7 +31,6 @@ var Chessboard = {
     $(event.target).append(ui.draggable.detach()); // Insert new piece
     ui.draggable.css("top", "0px");
     ui.draggable.css("left", "0px");
-    $(".chessboard td.ui-droppable").droppable("destroy");
   },
 }
 
