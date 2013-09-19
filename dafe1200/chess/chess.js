@@ -76,11 +76,32 @@ var Piece = (function() {
       return type;
     };
 
+    Piece.prototype.position = function() {
+      return {row: this.element.closest('tr').parent().children(":has(td)").index(this.element.closest('tr')),
+              col: this.element.closest('tr').children('td').index(this.element.closest('td'))};
+    };
+
     Piece.prototype.legalMoves = function() {
+      var pos = this.position();
+      var moves = jQuery(); // empty set
+
       switch ( this.type() ) {
-        default:
-          return $(".chessboard td");
+      case "knight":
+        jQuery.each([-2, -1, 1, 2], function(_, i) {
+            jQuery.each([-2, -1, 1, 2], function(_, j) {
+                if ( ( i != j ) && ( -i != j )
+                     && ( 0 <=  pos.row + i ) && ( pos.row + i <= 7 )
+                     && ( 0 <= pos.col + j ) && ( pos.col + j <= 7 ) ) {
+                  console.debug(i + " " + j + " " + (pos.row + i) + " " + (pos.col + j));
+                  moves = moves.add($(".chessboard ").find('tr:has(td)').eq(pos.row + i).find('td').eq(pos.col + j));
+                }
+              });
+          });
+        break;
+      default:
+        moves = $(".chessboard td");
       }
+      return moves;
     };
 
     return Piece;
