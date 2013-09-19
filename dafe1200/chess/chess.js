@@ -27,7 +27,7 @@ var Chessboard = {
     $(event.target).append(ui.draggable.detach()); // Insert new piece
     ui.draggable.css("top", "0px");
     ui.draggable.css("left", "0px");
-    $(".chessboard td").droppable("destroy");
+    $(".chessboard td.ui-droppable").droppable("destroy");
   },
 }
 
