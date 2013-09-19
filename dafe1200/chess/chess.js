@@ -4,6 +4,15 @@ var Chess = {
   black: ["\u265A", "\u265B", "\u265C", "\u265D", "\u265E", "\u265F"],
   },
 
+ types: {
+  king: ["\u2654", "\u265A"],
+  queen: ["\u2655", "\u265B"],
+  rook: ["\u2656", "\u265C"],
+  bishop: ["\u2657", "\u265D"],
+  knight: ["\u2658", "\u265E"],
+  pawn: ["\u2659", "\u265F"],
+  },
+
  init : function() {
     $(".chessboard td .piece").draggable({start: Chess.start});
   },
@@ -43,11 +52,23 @@ var Chess = {
 
  color: function( piece ) {
     piece = piece.text();
-    if (jQuery.inArray(piece, Chess.colors.white) >= 0)
-      return "white";
-    else if (jQuery.inArray(piece, Chess.colors.black) >= 0)
-      return "black";
-  }
+    var color;
+    jQuery.each(Chess.colors, function( c, pieces ) {
+        if ( jQuery.inArray(piece, pieces) >= 0 )
+          color = c;
+      });
+    return color;
+  },
+
+ type: function( piece ) {
+    piece = piece.text();
+    var type;
+    jQuery.each(Chess.types, function( t, pieces ) {
+        if ( jQuery.inArray(piece, pieces) >= 0 )
+          type = t;
+      });
+    return type;
+  },
 };
 
 $(document).ready(Chess.init);
