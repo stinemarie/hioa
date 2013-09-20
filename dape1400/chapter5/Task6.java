@@ -52,10 +52,10 @@ public class Task6
                 textArea.append(n + " \t");
         }
 
-        textArea.append("\n\nStørste tall:" + largest + "\n");
-        textArea.append("Nest største tall:" + second_largest + "\n");
-        textArea.append("Nest minste tall:" + second_smallest + "\n");
-        textArea.append("Minste tall:" + smallest);
+        textArea.append("\nStørste tall: " + largest + "\n");
+        textArea.append("Nest største tall: " + second_largest + "\n");
+        textArea.append("Nest minste tall: " + second_smallest + "\n");
+        textArea.append("Minste tall: " + smallest);
 
         JOptionPane.showMessageDialog(null, textArea, "Tilfeldige tall", JOptionPane.PLAIN_MESSAGE);
     }
