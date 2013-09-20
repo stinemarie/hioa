@@ -24,19 +24,20 @@ public class Task6
 {
     private static final int COUNT = 100;
     private static final int NUMBERS_PER_ROW = 10;
+    private static final int RANDOM_RANGE = 100; // Exclusive
 
     public static void main ( String[] args )
     {
         int n; // The current random number in the for loop
-        int smallest = 100;
-        int second_smallest = 100;
+        int smallest = RANDOM_RANGE;
+        int second_smallest = RANDOM_RANGE;
         int largest = 0;
         int second_largest = 0;
         JTextArea textArea = new JTextArea();
 
         for ( int i = 1; i <= COUNT; i++ )
         {
-            n = (int) ( Math.random() * 100 );
+            n = (int) ( Math.random() * RANDOM_RANGE );
             if ( n < smallest )
                 smallest = n;
             if ( ( smallest < n) && ( n < second_smallest ) )
